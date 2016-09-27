@@ -35,7 +35,7 @@ public class LogicTest {
 
     @Before
     public void setup() throws Exception {
-        saveFile = new StorageFile(saveFolder.newFile("testSaveFile.txt").getPath());
+        saveFile = new StorageStub(saveFolder.newFile("testSaveFile.txt").getPath());
         addressBook = new AddressBook();
         saveFile.save(addressBook);
         logic = new Logic(saveFile, addressBook);
